@@ -1,0 +1,34 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .map {
+    border: 1px solid;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    .square {
+      border: 1px solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & img {
+        width: 50px;
+        height: 50px;
+        display: none;
+      }
+      .mole-on {
+        display: block;
+      }
+    }
+  }
+}
