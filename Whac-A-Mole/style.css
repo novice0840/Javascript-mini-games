@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 main {
   height: 100%;
   display: flex;
@@ -16,6 +20,7 @@ main {
     height: 500px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     .square {
       border: 1px solid;
       display: flex;
@@ -31,4 +36,10 @@ main {
       }
     }
   }
+}
+
+.timer,
+.score {
+  height: 20px;
+  width: 20px;
 }

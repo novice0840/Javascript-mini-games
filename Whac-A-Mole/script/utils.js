@@ -1,2 +1,2 @@
-const b = 2;
-export { b };
+export const $ = document.querySelector;
+export const $$ = document.querySelectorAll;
