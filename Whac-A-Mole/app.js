@@ -26,7 +26,7 @@ const startGame = () => {
   $score.innerText = 0;
 };
 
-$moleOn?.addEventListener("click", () => {
+$moleOn.addEventListener("click", () => {
   console.log("mole on ");
   changeMole();
 });
