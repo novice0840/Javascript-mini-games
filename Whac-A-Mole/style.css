@@ -38,6 +38,12 @@ main {
   }
 }
 
+.ranking {
+  position: absolute;
+  left: 80px;
+  top: 163px;
+}
+
 .timer,
 .score {
   height: 20px;

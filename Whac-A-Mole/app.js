@@ -5,6 +5,7 @@ const $moleOn = document.querySelector(".mole-on");
 const $startButton = document.querySelector(".start-button");
 const $timer = document.querySelector(".timer");
 const $score = document.querySelector(".score");
+const $ranking = document.querySelector(".ranking");
 
 const createRandomNumber = () => {
   return Math.floor(Math.random() * MOLE_NUMBER);
@@ -26,6 +27,7 @@ const endGame = () => {
   localStorage.setItem(name, $score.innerText);
   $timer.innerText = "";
   $score.innerText = "";
+  loadRanking();
 };
 
 const startGame = () => {
@@ -53,3 +55,16 @@ $moles.forEach(($mole, index) => {
 $startButton.addEventListener("click", () => {
   startGame();
 });
+
+const loadRanking = () => {
+  const names = Object.keys(localStorage);
+  let content = "";
+  names.forEach((name, index) => {
+    content += `<div>${index + 1} ${name}</div>`;
+  });
+  $ranking.innerHTML = content;
+};
+
+window.onload = () => {
+  loadRanking();
+};
